@@ -1,0 +1,82 @@
+[자바스크립트]
+
+상속
+	- 객체간의 상속(일반 프로그래밍 언어)
+	- 프로토타입 체인의 연결(자바스크립트)
+		[[Prototype]]
+			__proto__ 속성으로 접근
+				ex) obj1.__proto__ = obj2;
+
+
+함수
+	function ... {
+	
+	
+	}
+	→ new Function(.., ..) 가 내부적으로 발생됨
+		→ Function의 상속(프로토타입 체인의 연결)
+		
+	
+	생성자 함수 객체 → 객체 생성
+		new 연산자
+			- 상속의 과정(생성자 함수 객체.prototype 객체의 상속)
+			
+			
+	ex) function Person() {}
+		const p1 = new Person();
+		
+		=
+		
+		function Person() {}
+		const p1 = {};
+		Object.setPrototypeOf(p1, Person.prototype);
+		
+	
+	생성자 안의 prototype 객체가 상속을 통해서 연결된다.
+	
+	
+	함수 내의 this는 호출될 때 결정된다.
+		ex) function Person() {
+				this.name = '이이름';
+				this.age = 40;
+			}
+			
+			Person()	// window.name = '이이름', window.age = 40
+			
+			
+			
+	자바스크립트의 this는 변경 가능하다. 아래는 new Person의 전체 과정
+		ex) function Person() {
+				this.name = '이이름';
+				this.age = 40;
+			}
+			
+			const p1 = {};
+			
+			Object.setPrototypeOf(p1, Person.prototype);
+			Person.apply(p1);	// Person.prototype.constructor.iapply(p1);
+			p1;		// Person {name : '이이름', age : 40}\
+			
+			
+	생성자 함수객체간 상속
+		- 생성자 함수.prototype 간의 상속
+		
+		ex) 타원(Ellipsis)
+			function Ellipse(a, b) {
+				this.a = a;
+				this.b = b;
+			}
+			
+			Ellipse.prototype.getArea = function() {
+				return this.a * this.b * Math.PI;
+			};
+			
+			function Circle(r) {
+				this.a = r;
+				this.b = r;
+			}
+			
+			Object.setPrototypeOf(Circle.prototype, Ellipsis.prototype);
+			
+			const c1 = new Circle(10);
+			c1.getArea(); //314.1592653589793

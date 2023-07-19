@@ -1,0 +1,36 @@
+JSX		→ 트랜스파일		→ JS
+nodejs
+
+
+node 자바스크립트 파일 → 실행
+npm (node package manager)
+
+	npm init → package.json
+	
+	npm install	패키지명
+	npm i		패키지명	→ 현재 프로젝트에만 설치(node_moduels)
+		i -g		 	→ 전역 설치 : 모든 경로에서 실행 가능
+		
+	npm i -D	패키지명 	→ 개발 시에만 필요한 의존성 추가
+							(Build 시 제거)
+	
+	npx 		명령어		→ 설치된 명령어를 실행
+	
+※npmjs.org (패키지 검색 사이트)
+
+
+※ 유용한 패키지
+	- react-app : 전역 설치
+		ex) npm i -g react-app
+	- yarn
+		ex) npm i -g yarn
+		
+yarn add 프로젝트명		
+yarn create react-app 프로젝트명
+
+
+yarn start
+
+[확장 프로그램]
+	- esLint 
+	- Prettier-Code Formatter

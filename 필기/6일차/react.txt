@@ -1,0 +1,37 @@
+Hooks
+	- useReducer
+		dispatch : 변화를 발생시키는 함수
+		const [state, dispatch] = useReducer(reducer, { count : 0 });
+	
+
+
+컴포넌트 스타일링
+	> yarn add sass
+	@import - 다른 css 파일 추가, 로드
+	ex) import './SassComponent.scss';
+	
+	> yarn add open-color include-media
+	open-color		: 다양한 색상표
+	include-media	: 
+	
+	
+	※ "~" : /node_modules/ 까지의 경로
+	
+	CSS Module
+		파일명.module.css
+		[파일명]_[클래스명]_[해시코드] 으로 번역된다.
+		위의 형태로 자동으로 만들어서 
+		컴포넌트 스타일 클래스 이름이 중첩되는 현상을 방지
+		
+		.module.css 확장자로 파일을 저장하기만 하면 CSS Module이 적용
+		
+		:global 클래스명 {
+		
+		}
+			전역에 해당하는 공통적인 클래스
+			
+	classnames : 조건에 따른 클래스 추가, 제거 통제
+	> yarn add classnames	
+		
+		
+리액트 라우터

@@ -1,0 +1,73 @@
+시점별로 호출되는 메서드가 다름
+	- Will : 작업 작동 전
+	- Did : 작동 작동 후 
+	
+※ 마운트 	→ DOM 구축 완료(화면출력)
+※ 업데이트	→ Render() 호출 → 화면 갱신
+※ 언마운트	→ 컴포넌트가 사라질 때
+
+yarn create react-app lifecycle
+
+※ 에러 컴포넌트
+	- componentDidCatch
+		→ 에러 발생 시 처리할 부분
+======================================		
+		
+yarn create react-app hooks-tutorial
+
+
+Hook
+	useState
+	
+	useEffect
+		→ componentDidMount : 컴포넌트 로딩 직후
+		→ componentDidUpdate : 컴포넌트 갱신 직후
+			+ shouldComponentUpdate(...)
+			
+		→ 
+[App.js]
+import { useState } from 'react';
+import ColorSelect from "./ColorSelect";
+
+const App = () => {
+  const [color, setColor] = useState(null);
+  const style = {
+    width : 500,
+    height: 500,
+    border : '1px solid #000',
+    background : color
+  };
+  if (color) style.color = color;
+
+  return (
+    <>
+      <div style={style}></div>
+      <ColorSelect setColor={setColor}></ColorSelect>
+    </>
+  )
+};
+
+export default App;			
+======================================	
+
+yarn create react-app newsviewer
+
+		
+	※newsapi.org
+		- key : 809c06ad93c840208963d6862a50f058
+		https://newsapi.org/v2/top-headlines?apiKey=809c06ad93c840208963d6862a50f058&country=kr
+	
+	axios : 
+		yarn add axios
+	
+	
+	jwt
+	sessionStorage
+	localStorage
+
+
+
+※ useMemo → 기존 값이 동일한 경우, 함수 호출 없이 동일한 값을 반환
+	: 성능상 이점
+	
+※ useCallback → 

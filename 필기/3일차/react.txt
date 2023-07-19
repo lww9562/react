@@ -1,0 +1,34 @@
+일반 함수 : 호출한 객체가 this
+	함수.apply(매개변수);
+		→ this 가 매개변수로 바뀐다.
+
+화살표 함수 : 함수가 정의될 때 this가 결정된다.
+	const person = {
+		name : "이이름",
+		age : 40,
+		showInfo : () => {
+			console.log(this);	
+			// 이 상태에선 this가 결정되지 않으므로, globalEC(window)
+		}
+	}
+	※함수가 정의될 때 이미 결정된 바로 위 this가 this로 설정됨
+	
+	const person = {
+		name : "이이름",
+		age : 40,
+		showInfo : function() {
+			const func = () => {
+				console.log(this);		
+				// 현 상태에선 this는 person!
+			};
+			func();
+		}
+	}
+
+
+이벤트 핸들링
+	onClick
+	onChange
+		→ 파일 선택
+		→ select
+		→ 텍스트를 입력

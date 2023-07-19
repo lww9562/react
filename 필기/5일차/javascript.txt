@@ -1,0 +1,13 @@
+자바스크립트
+	- 싱글쓰레드 모델
+	- 비동기 작업
+		setTimeout(function() {
+			// 5초 뒤에 실행되는 이벤트 핸들러
+			console.log("5초뒤 실행되는 작업");	
+		}, 5000);
+		
+		console.log("다음 작업");
+		
+		
+		→ 다음 작업 이 출력되고, 5초뒤에 '5초뒤 실행되는 작업' 이 출력됨
+		setTimeout function에 eventHandler가 숨어있다.
