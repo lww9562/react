@@ -1,7 +1,7 @@
-import CSSModule from "./CssModule";
+import ClassNames from "./ClassNames";
 
 const App = () => {
-  return <CSSModule />
+  return <ClassNames />
 };
 
 export default App;
