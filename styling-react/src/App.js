@@ -1,7 +1,7 @@
-import ClassNames from "./ClassNames";
+import StyledComponent from "./StyledComponent";
 
 const App = () => {
-  return <ClassNames />
+  return <StyledComponent />
 };
 
 export default App;

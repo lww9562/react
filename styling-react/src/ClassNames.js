@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from './ClassNames.module.css';
+import styles from './ClassNames.module.scss';
 import classNames from "classnames/bind";
 
 const cn = classNames.bind(styles);
