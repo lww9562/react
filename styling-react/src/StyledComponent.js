@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import CustomButton from './CustomButton';
 
 const Box = styled.div`
     background: ${props => props.color || 'blue'};
@@ -35,6 +36,12 @@ const Button = styled.button`
     }
 `;
 
+// 직접 생성한 컴포넌트에 CSS 적용하기
+const CButton = styled(CustomButton)`
+    border : 2px solid green;
+    color: orange;
+`;
+
 const StyledComponent = () => {
     
     return (
@@ -44,6 +51,7 @@ const StyledComponent = () => {
             </Box>
             <Box>
                 <Button>안녕하세요!</Button>
+                <CButton>안녕하세요!</CButton>
             </Box>
         </>
     )
