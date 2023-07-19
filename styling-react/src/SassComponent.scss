@@ -1,0 +1,48 @@
+@import './styles/common.scss';  // ../../ 과 같은 복잡한 경로에서 불리
+@import '~open-color/open-color';
+@import '~include-media/dist/include-media';
+
+
+.SassComponent {
+    display : flex;
+    background: $oc-gray-2;
+    @include media('<=720px') {
+        background: $oc-gray-9;
+    }
+    .box { // .SassComponent .box
+        background: red;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &.red { // .SassComponent .box.red
+            background: $red;
+            @include square(1); // 32px * 32px;
+        }
+        &.orange { 
+            background: $orange;
+            @include square(2);
+        }
+        &.yellow { 
+            background: $yellow;
+            @include square(3);
+        }
+        &.green { 
+            background: $green;
+            @include square(4);
+        }
+        &.blue { 
+            background: $blue;
+            @include square(5);
+        }
+        &.indigo { 
+            background: $indigo;
+            @include square(6);
+        }
+        &.violet { 
+            background: $violet;
+            @include square(7);
+        }
+        &:hover {   // .box:hover 
+            background: black;
+        }
+    }
+}
