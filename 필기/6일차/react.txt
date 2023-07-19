@@ -54,4 +54,9 @@ Hooks
 		
 		
 리액트 라우터
+	- react-router-dom v6 필요
 	
+	- 웹 애플리케이션의 History API를 이용,
+		페이지를 새로 불러오지 않고도 주소를 변경하고 컴포넌트를 이동
+	
+	> yarn add react-router-dom
