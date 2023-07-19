@@ -6,18 +6,19 @@ Hooks
 
 
 컴포넌트 스타일링
-	> yarn add sass
-	@import - 다른 css 파일 추가, 로드
-	ex) import './SassComponent.scss';
+	[sass/scss]
+		> yarn add sass
+		@import - 다른 css 파일 추가, 로드
+		ex) import './SassComponent.scss';
+		
+		> yarn add open-color include-media
+		open-color		: 다양한 색상표
+		include-media
 	
-	> yarn add open-color include-media
-	open-color		: 다양한 색상표
-	include-media	: 
+		※ "~" : /node_modules/ 까지의 경로
 	
 	
-	※ "~" : /node_modules/ 까지의 경로
-	
-	CSS Module
+	[CSS Module]
 		파일명.module.css
 		[파일명]_[클래스명]_[해시코드] 으로 번역된다.
 		위의 형태로 자동으로 만들어서 
@@ -29,9 +30,28 @@ Hooks
 		
 		}
 			전역에 해당하는 공통적인 클래스
+	
+	
+	[classnames] : 조건에 따른 클래스 추가, 제거 통제
+		> yarn add classnames	
+	
+		Function.prototype
+			.apply
+			.call
+			.bind
 			
-	classnames : 조건에 따른 클래스 추가, 제거 통제
-	> yarn add classnames	
+		※bind : this의 값을 변경, 매개변수를 고정하는 새로운 함수
+			
+	
+	[Styled Component]
+		> yarn add styled-components
+		자바스크립트 파일안에 스타일을 선언하는 방식
+		
+		※ 복잡한 CSS 및 조건문을 사용하기 위해서는
+			import { css } from 'styled-components';
+			
+		직접 만든 컴포넌트도 적용이 가능하다
 		
 		
 리액트 라우터
+	
